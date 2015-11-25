@@ -1,7 +1,7 @@
 K.Pattern.Base = stampit()
   .init(
     ({instance}) => {
-      instance[K.Pattern.patternsSymbol] = true;
+      instance[_patternsSymbol] = true;
     },
     ({instance, stamp}) => {
       instance.getStamp = () => stamp;
@@ -15,7 +15,7 @@ K.Pattern.Base = stampit()
     // TODO: Add a "short-circuit" option or method to add a test before all the others
     addTest(test) {
       if(typeof test !== 'function') {
-        throw new Error('Expected test to be a function');
+        throw new Error('Expected function to be passed as parameter');
         // NOTE: Would be pretty damn cool to check if test has a dynamic this (not bound, not an arrow function)
       }
       this.tests.push(test);

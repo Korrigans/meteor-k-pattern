@@ -1,10 +1,11 @@
-function isCheckStamp(pattern) {
-  return !!pattern[K.Pattern.patternsSymbol];
+function isKPattern(pattern) {
+  return !!pattern[_patternsSymbol];
 }
 
 check = (function(actualCheck) {
   return function(value, pattern) {
-    if (isCheckStamp(pattern)) {
+    console.log(isKPattern(pattern));
+    if (isKPattern(pattern)) {
       let checkProto, newPattern;
       checkProto = Match.Where(function(val) {
         return this.doTest(val);

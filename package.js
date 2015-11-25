@@ -23,10 +23,13 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'k-pattern.js',
-    'symbol.js',
+    'symbols.js',
     'check-hook.js',
     'checks/type.js',
     'stamps/base.js',
+    'stamps/primitives/undefined.js',
+    'stamps/primitives/null.js',
+    'stamps/primitives/function.js',
     'stamps/primitives/boolean.js',
     'stamps/primitives/number.js',
     'stamps/primitives/integer.js',
@@ -55,6 +58,9 @@ Package.onTest(function(api) {
   api.addFiles([
     'tests/units/namespaces.js',
     'tests/units/stamps/base.js',
+    'tests/units/stamps/primitives/undefined.js',
+    'tests/units/stamps/primitives/null.js',
+    'tests/units/stamps/primitives/function.js',
     'tests/units/stamps/primitives/boolean.js',
     'tests/units/stamps/primitives/number.js',
     'tests/units/stamps/primitives/integer.js',

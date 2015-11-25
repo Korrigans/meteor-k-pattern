@@ -39,4 +39,4 @@ checkType = function checkType(value) {
       throw new Match.Error(`Expected array, got ${typeof value}.`);
     }
   }
-}
+};

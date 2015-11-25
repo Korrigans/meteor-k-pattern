@@ -39,7 +39,7 @@ describe('[k-pattern][Unit] K.Pattern.Base', () => {
       expect(instance.tests.indexOf(testFunction)).not.toEqual(-1);
     });
 
-    describe('[Errors]', () => {
+    describe('[Error]', () => {
 
       it('should throw an error if parameter is not a function', () => {
         let instance = K.Pattern.Base();
